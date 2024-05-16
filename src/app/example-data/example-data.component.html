@@ -1,0 +1,16 @@
+<!-- text output -->
+<div *ngIf="list_message; else noData" class="ms-4 mb-4 p-2 rounded example_box bg-white" style="width: 32rem;">
+  <div>
+    example data:
+  </div>
+  <p *ngFor="let message of list_message" class="m-0 my-1">
+    {{message.id}}.
+    {{message.name}}
+    {{message.description}}
+  </p>
+</div>
+<ng-template #noData>
+  <div class="m-4 text-center text-danger bg-white" style=" height: 300px">
+    No data found. Try run database 'node app.js'.
+  </div>
+</ng-template>
