@@ -1,8 +1,9 @@
 <!-- text output -->
-<div *ngIf="list_message; else noData" class="ms-4 mb-4 p-2 rounded example_box bg-white" style="width: 32rem;">
+<div *ngIf="list_message; else noData" class="mx-4 mb-4 p-2 rounded example_box bg-white" style="width: auto;">
   <div>
     example data:
   </div>
+  <div class="border"></div>
   <p *ngFor="let message of list_message" class="m-0 my-1">
     {{message.id}}.
     {{message.name}}

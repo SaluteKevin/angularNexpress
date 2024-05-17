@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+// import { RouterLink } from '@angular/router';
 // ******
-import { ApiService } from './apis.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,24 +8,6 @@ import { ApiService } from './apis.service';
 })
 export class AppComponent {
   // declaration
-  title = 'hello'
+  title = 'test'
 
-  // for save data pull from url
-  list_message: any;
-
-  constructor(private apiService: ApiService){};
-  ngOnInit(){
-
-    // call getMessage() from apiService to pull data from url
-    // that assign in api service
-    this.apiService.getMessage().subscribe(data => {
-      // show data in console
-      console.table(data);
-
-      // save data to list_message for show data on example data
-      this.list_message = data;
-    }, error => {
-      console.error(error); // Handle errors centrally
-    })
-  }
 }

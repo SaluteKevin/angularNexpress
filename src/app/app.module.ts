@@ -9,19 +9,27 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 // *******
 import { HttpClientModule } from '@angular/common/http';
-import { RxjsLearningComponent } from './rxjs-learning/rxjs-learning.component';
-import { InputFormComponent } from './input-form/input-form.component';
-import { DetailTableComponent } from './detail-table/detail-table.component';
-import { ExampleDataComponent } from './example-data/example-data.component';
+import { InputFormComponent } from './components/input-form/input-form.component';
+import { DetailTableComponent } from './components/detail-table/detail-table.component';
+import { ExampleDataComponent } from './components/example-data/example-data.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { SandboxComponent } from './pages/sandbox/sandbox.component';
+// ******
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RxjsLearningComponent,
     InputFormComponent,
     DetailTableComponent,
-    ExampleDataComponent
+    ExampleDataComponent,
+    NavBarComponent,
+    LandingComponent,
+    SandboxComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +40,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatSortModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterOutlet
   ],
-  providers: [],
+  providers: [provideRouter(routes)],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

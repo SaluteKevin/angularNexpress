@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RxjsLearningComponent } from './rxjs-learning.component';
+import { NavBarComponent } from './nav-bar.component';
 
-describe('RxjsLearningComponent', () => {
-  let component: RxjsLearningComponent;
-  let fixture: ComponentFixture<RxjsLearningComponent>;
+describe('NavBarComponent', () => {
+  let component: NavBarComponent;
+  let fixture: ComponentFixture<NavBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RxjsLearningComponent ]
+      declarations: [ NavBarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RxjsLearningComponent);
+    fixture = TestBed.createComponent(NavBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

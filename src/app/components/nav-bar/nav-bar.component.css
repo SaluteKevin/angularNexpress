@@ -1,0 +1,39 @@
+.nav_body * {
+  margin: 0px;
+}
+
+.nav_body {
+  background-color: black;
+  transition: 1s;
+}
+
+.nav_body:hover {
+  background-color: white;
+  transition: 1s;
+  a {
+    color: grey;
+  }
+}
+
+.nav_body .logo:hover {
+  color: black;
+  transition-duration: 500ms;
+}
+
+li,
+.logo {
+  padding: 1rem 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+  background-color: black;
+  transition-duration: 500ms;
+}
+li:hover a {
+  color: white;
+}

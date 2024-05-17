@@ -1,0 +1,12 @@
+.page {
+  position: relative;
+  height: 90%;
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 64px;
+}
